@@ -1,11 +1,13 @@
 # Global Match & Replace Extension
 
+![Global Match & Replace extension screenshot](screenshot.png)
+
 Provides a system-wide match & replace table that applies to all Burp tools (including Burp AI). This goes beyond Proxy Match & Replace, which only affects Proxy.
 
 ## Build
 
 ```bash
-./gradlew clean jar
+./gradle clean jar
 ```
 
 The built JAR is in `build/libs/burp-global-match-replace-1.0.0.jar`.
