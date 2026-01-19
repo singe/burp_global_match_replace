@@ -58,7 +58,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, ITab {
         this.callbacks = callbacks;
         this.helpers = callbacks.getHelpers();
 
-        callbacks.setExtensionName("Header Strip");
+        callbacks.setExtensionName("Global Match & Replace");
         callbacks.registerHttpListener(this);
 
         List<Rule> rules = loadRules();
@@ -91,7 +91,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, ITab {
 
     @Override
     public String getTabCaption() {
-        return "Header Strip";
+        return "Global Match & Replace";
     }
 
     @Override
@@ -174,7 +174,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, ITab {
         ioConstraints.gridy = 0;
         ioConstraints.weightx = 0.5;
         ioConstraints.anchor = GridBagConstraints.WEST;
-        JLabel inputLabel = new JLabel("Sample Input (paste full request/response):");
+        JLabel inputLabel = new JLabel("Sample Input:");
         io.add(inputLabel, ioConstraints);
 
         sampleInput = new JTextPane();
@@ -195,7 +195,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener, ITab {
         ioConstraints.weighty = 0.0;
         ioConstraints.fill = GridBagConstraints.NONE;
         ioConstraints.insets = new java.awt.Insets(0, 16, 0, 0);
-        JLabel outputLabel = new JLabel("Preview Output (read-only, regex groups highlighted):");
+        JLabel outputLabel = new JLabel("Preview Output:");
         io.add(outputLabel, ioConstraints);
 
         ioConstraints.gridy = 1;

@@ -21,7 +21,7 @@ java {
 }
 
 jar {
-    archiveBaseName = 'burp-header-strip'
+    archiveBaseName = 'burp-global-match-replace'
     manifest {
         attributes(
             'Implementation-Title': 'Burp Header Strip',

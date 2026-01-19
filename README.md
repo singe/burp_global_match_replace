@@ -1,4 +1,4 @@
-# Burp Header Strip Extension
+# Global Match & Replace Extension
 
 Provides a system-wide match & replace table that applies to all Burp tools (including Burp AI). This goes beyond Proxy Match & Replace, which only affects Proxy.
 
@@ -8,7 +8,7 @@ Provides a system-wide match & replace table that applies to all Burp tools (inc
 ./gradlew clean jar
 ```
 
-The built JAR is in `build/libs/burp-header-strip-1.0.0.jar`.
+The built JAR is in `build/libs/burp-global-match-replace-1.0.0.jar`.
 
 ## Load in Burp
 
@@ -18,7 +18,7 @@ The built JAR is in `build/libs/burp-header-strip-1.0.0.jar`.
 
 ## Configure
 
-Open the **Header Strip** tab:
+Open the **Global Match & Replace** tab:
 
 - **Match & Replace**: add rules that apply to request/response messages system-wide.
 - Example rules are pre-populated and disabled by default.
