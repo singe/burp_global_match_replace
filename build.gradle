@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.portswigger.burp'
+version = '1.0.0'
+
+def burpApiVersion = '1.7.22'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly "net.portswigger.burp.extender:burp-extender-api:${burpApiVersion}"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+    archiveBaseName = 'burp-header-strip'
+    manifest {
+        attributes(
+            'Implementation-Title': 'Burp Header Strip',
+            'Implementation-Version': version
+        )
+    }
+}
