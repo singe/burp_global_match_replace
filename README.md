@@ -11,6 +11,7 @@ Provides a system-wide match & replace table that applies to all Burp tools (inc
 ```
 
 The built JAR is in `build/libs/burp-global-match-replace-1.0.0.jar`.
+You can also download the JAR from the GitHub Releases page: `https://github.com/singe/burp_global_match_replace/releases`.
 
 ## Load in Burp
 
