@@ -37,6 +37,8 @@ Note: This project targets **Java 21** bytecode for Burp compatibility. Use Java
 
 ## Rules Overview
 
+<img width="644" height="814" alt="image" src="https://github.com/user-attachments/assets/4cfaeaa1-b8ca-4ac7-a2e5-b48bbb0fed44" />
+
 Each rule has the following properties:
 
 - **Enabled**: Whether the rule is active.
@@ -99,6 +101,8 @@ Multiline: ON
 
 ## Rules Pane (Suite Tab)
 
+<img width="1352" height="963" alt="image" src="https://github.com/user-attachments/assets/f6a65495-c303-4d3f-adaa-928dd411829a" />
+
 The suite tab provides full rule management and testing:
 
 ### Rule List
@@ -129,6 +133,8 @@ The test output highlights:
 ---
 
 ## GMR Diff View
+
+<img width="1352" height="963" alt="image" src="https://github.com/user-attachments/assets/92c1fe8c-b646-4b44-90a6-35a89d16acdb" />
 
 When a rule modifies a request or response, a **“GMR Diff”** tab appears inside the request/response editor (in tools like Proxy, Repeater, Intruder, etc.).
 
