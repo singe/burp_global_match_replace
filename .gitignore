@@ -2,9 +2,20 @@
 .gradle/
 build/
 
-# IntelliJ / IDEA
+# IntelliJ IDEA
 .idea/
 *.iml
+out/
 
-# Mac
+# VS Code
+.vscode/
+
+# macOS
 .DS_Store
+
+# Logs
+*.log
+
+# OS / misc
+*.swp
+*~
