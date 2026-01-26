@@ -2,30 +2,35 @@ plugins {
     id 'java'
 }
 
-group = 'com.portswigger.burp'
-version = '1.0.0'
+def currentMajor = Integer.parseInt(JavaVersion.current().majorVersion)
+if (currentMajor < 21) {
+    throw new GradleException("This build must be run with Java 21 or later. Current: Java ${currentMajor}. " +
+        "Set JAVA_HOME to a supported JDK (e.g., 21 or 25).")
+}
 
-def burpApiVersion = '1.7.22'
+group = 'com.portswigger'
+version = '1.0.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compileOnly "net.portswigger.burp.extender:burp-extender-api:${burpApiVersion}"
+    compileOnly 'net.portswigger.burp.extensions:montoya-api:2025.11'
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
 }
 
 jar {
-    archiveBaseName = 'burp-global-match-replace'
     manifest {
-        attributes(
-            'Implementation-Title': 'Burp Header Strip',
-            'Implementation-Version': version
-        )
+        attributes 'Main-Class': 'com.portswigger.globalmatchreplace.GlobalMatchReplaceExtension'
     }
 }
